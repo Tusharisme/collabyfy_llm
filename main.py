@@ -1,12 +1,13 @@
 import google.generativeai as genai
 import json
 import os
+import dotenv
 
+dotenv.load_dotenv()
 # --- Configuration ---
 # Replace "YOUR_API_KEY" with your actual key.
-API_KEY = "YOUR_API_KEY"
+API_KEY = os.getenv("API_KEY")
 genai.configure(api_key=API_KEY)
-
 # --- The NEW, STRICT Prompt Template ---
 # (This part remains the same as before)
 PROMPT_TEMPLATE_STRICT = """
