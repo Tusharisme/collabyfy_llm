@@ -79,7 +79,7 @@ def extract_strict_criteria(campaign_brief: str) -> dict:
         }
 
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash-latest")
+        model = genai.GenerativeModel("gemini-2.5-flash")
         full_prompt = PROMPT_TEMPLATE_STRICT.format(campaign_brief=campaign_brief)
         response = model.generate_content(full_prompt)
 
